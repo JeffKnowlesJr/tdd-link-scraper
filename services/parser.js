@@ -7,7 +7,19 @@ exports.links = (html) => {
       const url = $(element).attr('href')
       const text = $(element).text()
       const id = $(element).attr('id')
-      return { url, text, id }
+      let classes = $(element).attr('class')
+      if (classes) {
+        classes = classes.split(' ')
+      } else {
+        classes = ['']
+      }
+      let parentClasses = $(element).parent().attr('class')
+      if (parentClasses) {
+        parentClasses = parentClasses.split(' ')
+      } else {
+        parentClasses = ['']
+      }
+      return { url, text, id, classes, parentClasses }
     })
     .get()
 }
