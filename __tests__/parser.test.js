@@ -8,8 +8,6 @@ beforeAll(() => {
   links = parser.links(html)
 })
 
-const textCases = () => {}
-
 it('should give the correct link url', () => {
   expect(links[0].url).toBe('#')
 })

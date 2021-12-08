@@ -6,20 +6,21 @@ exports.links = (html) => {
     .map((index, element) => {
       const url = $(element).attr('href')
       const text = $(element).text()
-      const id = $(element).attr('id')
-      let classes = $(element).attr('class')
-      if (classes) {
-        classes = classes.split(' ')
-      } else {
-        classes = ['']
-      }
-      let parentClasses = $(element).parent().attr('class')
-      if (parentClasses) {
-        parentClasses = parentClasses.split(' ')
-      } else {
-        parentClasses = ['']
-      }
-      return { url, text, id, classes, parentClasses }
+      // Excluding Superficial fields
+      // const id = $(element).attr('id')
+      // let classes = $(element).attr('class')
+      // if (classes) {
+      //   classes = classes.split(' ')
+      // } else {
+      //   classes = ['']
+      // }
+      // let parentClasses = $(element).parent().attr('class')
+      // if (parentClasses) {
+      //   parentClasses = parentClasses.split(' ')
+      // } else {
+      //   parentClasses = ['']
+      // }
+      return { url, text /*, id, classes, parentClasses*/ }
     })
     .get()
 }
