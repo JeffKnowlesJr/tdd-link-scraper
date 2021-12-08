@@ -1,10 +1,12 @@
 const parser = require('./services/parser')
-const parser = require('./services/writer')
+const writer = require('./services/writer')
+const formatter = require('./services/formatter')
 const fs = require('fs')
 
 // read url
-html = fs.readFileSync('./test.html')
-links = parser.links(html)
-writer.write(links)
+const html = fs.readFileSync('./test.html')
+const links = parser.links(html)
+const data = formatter.format(links)
+writer.write(data)
 
 console.log(links.length)

@@ -1,11 +1,18 @@
 const fs = require('fs')
 
-const filename = './output.csv'
+const path = './output.csv'
 
 exports.write = (data) => {
+  try {
+    fs.unlinkSync(path)
+    //file removed
+  } catch (err) {
+    console.error(err)
+  }
+
   for (let i = 0; i < data.length; i++) {
     fs.appendFileSync(
-      filename,
+      path,
       extractAsCSV(data[i]),
       (err) => {
         if (err) {
