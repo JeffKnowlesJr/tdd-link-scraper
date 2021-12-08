@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10",
+    "jest": "^27.4.3"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.15"
+  },
+  "name": "tdd-scraper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "node ./services/getter",
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
