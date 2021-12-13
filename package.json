@@ -2,6 +2,7 @@
   "dependencies": {
     "axios": "^0.24.0",
     "cheerio": "^1.0.0-rc.10",
+    "child_process": "^1.0.2",
     "jest": "^27.4.3"
   },
   "devDependencies": {
@@ -13,12 +14,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
+    "scan": "nodemon server.js --watch src.html",
     "dev": "nodemon server.js",
     "prepare": "node ./services/getter",
     "test": "jest --watchAll"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "author": "Jeff Knowles Jr",
+  "license": "MIT",
+  "description": "A simple web scraper to extract text, url, id, classes, and parent classes of hyperlinks"
 }
