@@ -6,7 +6,10 @@ const path = `./bin/${process.env.URL.replace(/[^\w\s]/gi, '')}.csv`
 
 exports.write = async (data) => {
   try {
-    fs.unlinkSync(path)
+    if (fs.existsSync(path)) {
+      await fs.unlinkSync(path)
+      //file removed
+    }
     //file removed
   } catch (err) {
     console.error(err)
@@ -29,7 +32,9 @@ exports.write = async (data) => {
       return
     }
 
-    console.log(`stdout:\n${stdout}`)
+    if (stdout) {
+      console.log(`stdout:\n${stdout}`)
+    }
   })
 }
 

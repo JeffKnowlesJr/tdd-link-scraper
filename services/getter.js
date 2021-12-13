@@ -19,10 +19,12 @@ const saveHtmlToFile = (html) => {
 
 async function main() {
   try {
-    await fs.unlinkSync(path)
-    //file removed
+    if (fs.existsSync(path)) {
+      await fs.unlinkSync(path)
+      //file removed
+    }
   } catch (err) {
-    console.error(err)
+    console.log(err)
   }
   try {
     const html = await getHtml(getUrl)
