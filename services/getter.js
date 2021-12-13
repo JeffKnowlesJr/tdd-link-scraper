@@ -1,6 +1,5 @@
 const axios = require('axios')
 const fs = require('fs')
-require('dotenv').config()
 const getUrl = process.env.URL
 const path = './src.html'
 

@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 exports.format = (links) => {
   const dataUrl = process.env.URL
   const data = []

@@ -1,6 +1,5 @@
 const fs = require('fs')
 const { exec } = require('child_process')
-require('dotenv').config()
 
 const path = `./bin/${process.env.URL.replace(/[^\w\s]/gi, '')}.csv`
 
