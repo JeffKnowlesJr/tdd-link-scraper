@@ -3,12 +3,12 @@
     "axios": "^0.24.0",
     "cheerio": "^1.0.0-rc.10",
     "child_process": "^1.0.2",
-    "concurrently": "^6.4.0",
-    "jest": "^27.4.3",
     "dotenv": "^10.0.0",
     "nodemon": "^2.0.15"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^27.4.3"
+  },
   "name": "tdd-scraper",
   "version": "1.0.0",
   "main": "index.js",
