@@ -2,7 +2,6 @@ const parser = require('./services/parser')
 const writer = require('./services/writer')
 const formatter = require('./services/formatter')
 const fs = require('fs')
-require('dotenv').config()
 const path = './src.html'
 
 // read url
